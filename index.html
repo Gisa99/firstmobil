@@ -22,13 +22,20 @@
                 <label for="ibio"> Conte-nos sobre você!</label>
                 <input type="text" name="bio" id="ibio">
                 
+                
                 </div>
 
                 <div class="post">
-                    <input type="button" name="post" id=post value="postar">
+                    <input type="button" name="post" id=post value="postar" onclick="postar()">
                 </div>
     
             </form>
+        </div>
+
+        <div id="msg" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+
+            Ler meu horóscopo
+
         </div>
 
         <div id="picture">
@@ -37,14 +44,6 @@
         <p> Nada melhor que ler um livro!</p>
 
         </div>
-     
-       <article>
-        
-
-
-       </article>
-
-
 
 
     </main>
@@ -52,10 +51,23 @@
 
     
     <script>
-        //alert('Seja bem-vindo, humano!')
-       // confirm('Este site contém cookies!')
-        //prompt('Você gosta de cookies?')
+       var msg = document.getElementById('msg')
+       
+        function entrar(){
+            msg.style.background = 'purple'
+            msg.style.color = 'white'
+        }
 
+        function clicar(){
+            msg.innerText='Aquário, o universo não está nem aí para você!'
+        }
+
+        function sair(){
+            msg.innerText ='Por hoje é só!'   
+        }
+
+
+    
 
     </script>
     
