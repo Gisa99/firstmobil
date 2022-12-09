@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Mobil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Antissociais</h1>
+    <div id="perfil">
+        <img src="Imagens/IMG_20200621_111109050.jpg" alt="foto de perfil">
+        <h2>Bem-vinda, Gisele!</h2>
+    </div>
+    
+    <main>
+
+                <label for="ibio"> Conte-nos sobre você!</label>
+                <input type="text" name="bio" id="ibio">
+                <input type="button" name="post" id=post value="postar" onclick="postar()">
+
+        <div id="post">
+
+        </div>
+            
+    
+        <div id="msg" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+
+            Ler meu horóscopo
+
+        </div>
+
+        <div id="picture">
+            <h3>Gisele França diz:</h3>
+        <img src="Imagens/feed.jpg" alt="post feed">
+        <p> Nada melhor que ler um livro!</p>
+
+        </div>
+
+
+    </main>
+
+
+    
+    <script>
+
+        function postar(){
+            var postar = document.querySelector('input#ibio')
+            var post = document.querySelector('div#post')
+            post.innerHTML = `Gisele diz: ${postar}`
+        }
+
+
+    
+
+
+       var msg = document.getElementById('msg')
+       
+        function entrar(){
+            msg.style.background = 'purple'
+            msg.style.color = 'white'
+        }
+
+        function clicar(){
+            msg.innerText='Aquário, o universo não está nem aí para você!'
+        }
+
+        function sair(){
+            msg.innerText ='Por hoje é só!'   
+        }
+
+
+    
+
+    </script>
+    
+</body>
+</html>
